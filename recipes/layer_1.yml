@@ -1,0 +1,4 @@
+---
+type: containerfile
+snippets:
+  - RUN yum -y install ostree
