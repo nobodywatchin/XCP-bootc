@@ -1,4 +1,4 @@
-name: XCP-Builder
+name: XCP-bootc-Builder
 on:
   schedule:
     - cron:
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build Custom Image
+    name: Build XCP-bootc
     runs-on: ubuntu-latest
     permissions:
       contents: read
