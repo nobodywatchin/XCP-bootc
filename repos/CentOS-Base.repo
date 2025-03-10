@@ -1,0 +1,50 @@
+# CentOS-Base.repo
+#
+# Updated to use CentOS Vault for CentOS 7, since mirrorlist.centos.org is no longer functional.
+#
+
+[base]
+name=CentOS-7 - Base
+baseurl=http://vault.centos.org/centos/7/os/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+exclude=cloud-utils-growpart
+
+[updates]
+name=CentOS-7 - Updates
+baseurl=http://vault.centos.org/centos/7/updates/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+exclude=cloud-utils-growpart
+
+[extras]
+name=CentOS-7 - Extras
+baseurl=http://vault.centos.org/centos/7/extras/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+exclude=cloud-utils-growpart
+
+[centosplus]
+name=CentOS-7 - Plus
+baseurl=http://vault.centos.org/centos/7/centosplus/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://vault.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+
+[contrib]
+name=CentOS-7 - Contrib
+baseurl=http://vault.centos.org/centos/7/contrib/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://vault.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+
+[rhel-atomic-rebuild]
+name=rhel-atomic-rebuild
+baseurl=http://vault.centos.org/centos/7/atomic/$basearch/
+gpgcheck=1
+gpgkey=http://vault.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+
+[atomic7-testing]
+name=atomic7-testing
+baseurl=https://download.copr.fedorainfracloud.org/results/jasonbrooks/rpm-ostree-toolbox/epel-7-x86_64
+gpgcheck=0
